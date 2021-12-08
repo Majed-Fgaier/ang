@@ -1,0 +1,80 @@
+	<!--<-table border="2" *ngIf="products; else empty">
+  <tr>
+    <th> 
+        <button (click)=seen()> {{nomb}} </button>
+    </th>
+    <th>id</th>
+    <th>nom</th>
+    <th>prix</th>
+    <th>quantite</th>
+  </tr> 
+  <tr *ngFor="let p of products" [ngStyle]="{color: getColor(p.quantite)}">
+    <td><img *ngIf="nomb=='hidden'" src="{{ p.urlIMG }}" alt="" height="" width="50px" /></td>
+    <td>{{ p.id }}</td>
+    <td>{{ p.nom }}</td>
+    <td>{{ p.prix }}</td>
+    <td>{{ p.quantite }}</td>
+  </tr>
+</-table> -->
+
+<div class="container my-5">
+  <input
+    type="text"
+    placeholder="Search"
+    class="w-100"
+    [(ngModel)]="searchText"
+    (keyup)="Search()"
+  />
+
+  <table class="table table-striped my-4 border" *ngIf="products; else empty">
+    <thead class="bg-danger text-white">
+      <tr>
+        <th scope="col">
+          Images :
+          <button
+            type="button"
+            class="btn btn-warning"
+            rounded="true"
+            mdbWavesEffect
+            (click)="seen()"
+          >
+            {{ nomb }}
+          </button>
+        </th>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let p of filteredProducts"
+        [ngStyle]="{ color: getColor(p.quantite) }"
+      >
+        <td>
+          <img
+            *ngIf="nomb == 'hidden'"
+            src=""
+            alt=""
+            height=""
+            width="50px"
+            class="rounded shadow-5"
+          />
+        </td>
+        <td>{{ p.id }}</td>
+
+        <td>
+          <a routerLink="/products/{{ p.id }}"> {{ p.nom }} </a>
+        </td>
+
+        <td>{{ p.prix }}</td>
+        <td>{{ p.quantite }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #empty>
+  <h4>table is empty</h4>
+</ng-template>

@@ -1,0 +1,32 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "nom": "pc portable",
+      "prix": 1500,
+      "quantite": 20,
+      "nomImg": "pc portable"
+    },
+    {
+      "id": 1,
+      "nom": "pc portable",
+      "prix": 1500,
+      "quantite": 20,
+      "nomImg": "pc portable"
+    },
+    {
+      "id": 3,
+      "nom": "pc",
+      "prix": 1500,
+      "quantite": 20,
+      "nomImg": "pc portable"
+    },
+    {
+      "id": 4,
+      "nom": "pc5",
+      "prix": 1560,
+      "quantite": 20,
+      "nomImg": "pc8"
+    }
+  ]
+}

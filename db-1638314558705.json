@@ -1,0 +1,11 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "nom": "pc portable",
+      "prix": 1500,
+      "quantite": 20,
+      "nomImg": "pc portable"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+</head>
+<header>
+  <button (click)=retour() type="button" class="btn btn-success  ">GO Back   </button>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Product Details :</h1>
+      <p class="lead">Asus Rog Strix Hero III Details :</p>
+    </div>
+  </div>
+</header>
+<body>
+
+    <div class="container my-5">
+      
+    
+      <table class="table table-striped my-4 border" >
+        <thead class="bg-danger text-white">
+          <tr>
+            <th scope="col">
+              Images :
+            
+            </th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="{{ produit.urlIMG }}"
+                alt=""
+                height=""
+                width="50px"
+                class="rounded shadow-5"
+              />
+            </td>
+            <td>{{ produit.id }}</td>
+    
+            <td>
+              <a routerLink="/products/{{ produit.id }}"> {{ produit.nom }} </a>
+            </td>
+    
+            <td>{{ produit.prix }}</td>
+            <td>{{ produit.quantite }}</td>
+          </tr>
+          
+
+
+        </tbody>
+      </table>
+      <p>
+        <td>
+          <ul>
+            <li>
+              <td> Series :	ROG Strix Hero III</td>
+            </li>
+            <li>
+              Brand	: ASUS
+            </li>
+            <li> Specific Uses For Product :	Personal, Gaming, Business</li>
+            <li>
+              Screen Size	: 15.6 Inches
+            </li>
+           
+            <li>
+              Operating System	: Windows 10 Pro
+            </li>
+            <li>
+              Human Interface Input :	Keyboard
+            </li>
+            <li>
+              CPU Manufacturer:	Intel
+            </li>
+            <li>
+              Connectivity Technology :	Bluetooth, Wi-Fi, USB, Ethernet, HDMI
+
+            </li>
+            <li>
+              Hard Disk Size :	512 GB
+            </li>
+            <li>
+              Processor Count :	6
+            </li>
+
+          </ul>
+        </td>
+      </p>
+
+      
+    </div>
+
+    <app-liste-produits>  </app-liste-produits>
+
+
+
+</body>
+</html>
